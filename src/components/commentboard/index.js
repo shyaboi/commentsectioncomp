@@ -1,13 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Com from './components/commentboard';
 import commentBox from 'commentbox.io';
 
 
-
-
-  class PageWithComments extends React.Component {
+class PageWithComments extends React.Component {
 
     componentDidMount() {
 
@@ -26,6 +21,13 @@ import commentBox from 'commentbox.io';
         );
     }
 }
+// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
+function Com() {
+  return (
+    <div> <div class="commentbox">nignog</div>
+</div>
+  );
+}
 
+export default Com;
 
-export default PageWithComments;
