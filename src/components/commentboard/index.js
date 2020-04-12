@@ -1,32 +1,26 @@
 import React from 'react';
 import commentBox from 'commentbox.io';
 
+class Com extends React.Component {
 
-class PageWithComments extends React.Component {
+  componentDidMount() {
 
-    componentDidMount() {
+      this.removeCommentBox = commentBox('my-project-id');
+  }
 
-        this.removeCommentBox = commentBox('my-project-id');
-    }
+  componentWillUnmount() {
 
-    componentWillUnmount() {
+      this.removeCommentBox();
+  }
 
-        this.removeCommentBox();
-    }
+  render() {
 
-    render() {
-
-        return (
-            <div className="commentbox" />
-        );
-    }
-}
-// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
-function Com() {
-  return (
-    <div> <div class="commentbox">nignog</div>
-</div>
-  );
+      return (
+        <div id='con'>
+          <div id='com' className="commentbox" />
+          </div>
+      );
+  }
 }
 
 export default Com;
